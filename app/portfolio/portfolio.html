@@ -1,0 +1,23 @@
+<section class="portfolio">
+    <h1>My works</h1>
+    <div class="container">
+        <div class="portfolio__categories categories" ng-init="filters.category_id = ''">
+            <a class="categories__item" ng-click="filters.category_id = ''">All</a>
+            <a class="categories__item" ng-repeat="category in portfolio_categories"
+               ng-click="filters.category_id = category.id">
+                {{ category.name }}
+            </a>
+        </div>
+        <div class="photo-grid">
+            <div class="photo-grid__item" ng-repeat="item in portfolio | filter:filters">
+                <div class="item__image">
+                    <div style="background-image: url({{item.image_url}});"></div>
+                </div>
+                <div class="item__caption">
+                    <h4 class="item__title">{{ item.title }}</h4>
+                    <div class="item__type">{{ item.name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

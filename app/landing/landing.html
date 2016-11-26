@@ -1,0 +1,105 @@
+<main>
+    <section class="about section--white">
+        <div class="container">
+            <div class="about__intro">
+                <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet posuere
+                    odio, et dignissim sapien. Etiam vel ante erat. Cras sed ornare lectus, vel consectetur dolor.
+                    Vestibulum id purus neque. Sed vitae commodo nunc. Aenean urna lorem, facilisis ac nisi vitae,
+                    elementum
+                    laoreet augue.</p>
+
+                <p class="about__text">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                    Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum, eget
+                    consectetur ligula mauris vestibulum felis.
+                    Etiam vel luctus leo, sed finibus metus. Class aptent taciti sociosqu ad litora torquent per conubia
+                    nostra, per
+                    inceptos himenaeos.</p>
+            </div>
+
+            <div class="about__activities">
+                <h1>What I do</h1>
+                <div class="text-grid">
+                    <div class="text-grid__item">
+                        <h3 class="item__header">Template.</h3>
+                        <p class="item__body">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                            Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum,
+                            eget
+                            consectetur ligula mauris vestibulum felis.</p>
+                    </div>
+                    <div class="text-grid__item">
+                        <h3 class="item__header">Brand.</h3>
+                        <p class="item__body">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                            Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum,
+                            eget
+                            consectetur ligula mauris vestibulum felis.</p>
+                    </div>
+                    <div class="text-grid__item">
+                        <h3 class="item__header">Dreams.</h3>
+                        <p class="item__body">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                            Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum,
+                            eget
+                            consectetur ligula mauris vestibulum felis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio">
+        <h1>My works</h1>
+        <div class="container">
+            <div class="portfolio__categories categories" ng-init="filters.category_id = ''">
+                <a class="categories__item" ng-click="filters.category_id = ''">All</a>
+                <a class="categories__item" ng-repeat="category in portfolio_categories"
+                   ng-click="filters.category_id = category.id">
+                    {{ category.name }}
+                </a>
+            </div>
+            <div class="photo-grid">
+                <div class="photo-grid__item" ng-repeat="item in portfolio | filter:filters | limitTo:9">
+                    <div class="item__image">
+                        <div style="background-image: url({{item.image_url}});"></div>
+                    </div>
+                    <div class="item__caption">
+                        <h4 class="item__title">{{ item.title }}</h4>
+                        <div class="item__type">{{ item.name }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#!/portfolio" class="btn btn-more">See My Works</a>
+        </div>
+    </section>
+
+    <section class="photography section--white">
+        <h1>Photography</h1>
+        <div class="container">
+            <p class="photography__text">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum, eget
+                consectetur ligula mauris vestibulum felis.
+                Etiam vel luctus leo, sed finibus metus. Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per
+                inceptos himenaeos.</p>
+            <div class="photo-grid">
+                <div class="photo-grid__item" ng-repeat="photo in photos | limitTo:9">
+                    <div class="item__image">
+                        <div style="background-image: url({{photo.image_url}});"></div>
+                    </div>
+                </div>
+            </div>
+            <a href="#!/photos" class="btn btn-more">See My Photos</a>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container">
+            <p class="subscribe__text">Curabitur sit amet porta elit. Suspendisse luctus lorem eu porta pretium.
+                Pellentesque pretium, libero ultricies ullamcorper sollicitudin, erat nisl tristique ipsum, eget
+                consectetur ligula mauris vestibulum felis.</p>
+            <div class="subscribe__form">
+                <input type="email" ng-model="subscribe.email" placeholder="Enter your E-Mail...">
+                <button type="submit" ng-click="subscribe(subscribe.email)">Subscribe</button>
+            </div>
+        </div>
+    </section>
+</main>

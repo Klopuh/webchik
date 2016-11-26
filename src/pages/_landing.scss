@@ -1,0 +1,98 @@
+.about {
+  padding: 100px 0;
+
+  &__intro {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1.8em;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    @include media(max-width 768px) {
+      font-size: 1.4em;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.portfolio {
+  overflow: hidden;
+  background: #23232e;
+  color: white;
+  padding: 100px 0;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.photography {
+  padding: 100px 0;
+  &__text {
+    font-size: 1.8em;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @include media(max-width 425px) {
+      font-size: 1.2em;
+    }
+  }
+}
+
+.btn-more {
+  display: block;
+  margin: 80px auto 0;
+  min-width: 200px;
+  max-width: 250px;
+}
+
+.subscribe {
+  overflow: hidden;
+  background: #23232e;
+  color: white;
+  padding: 100px 0;
+
+  &__text {
+    text-align: center;
+  }
+
+  &__form {
+    max-width: 600px;
+    margin: 50px auto 0;
+
+    input {
+      display: inline-block;
+      vertical-align: top;
+      width: 60%;
+
+      @include media(max-width 425px) {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    button {
+      display: inline-block;
+      vertical-align: top;
+      width: 38%;
+
+      @include media(max-width 425px) {
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}
+
+.subscribers {
+  h1 {
+    margin-bottom: 30px;
+  }
+  text-align: center;
+  li {
+    font-weight: bold;
+  }
+}

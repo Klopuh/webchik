@@ -1,0 +1,29 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100% !important;
+}
+
+.container {
+  max-width: 1200px;
+  &--login {
+    max-width: 400px;
+  }
+  margin: 0 auto;
+  padding: 0 10px;
+}

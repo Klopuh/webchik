@@ -1,0 +1,12 @@
+<section class="photography">
+  <h1>Photography</h1>
+  <div class="container">
+    <div class="photo-grid">
+      <div class="photo-grid__item" ng-repeat="photo in photos">
+        <div class="item__image">
+          <div style="background-image: url({{photo.image_url}});"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
